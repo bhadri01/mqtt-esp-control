@@ -1,8 +1,5 @@
-import asyncio
-import websockets
 from handGesture import hand
 import cv2
-import mediapipe as mp
 import json
 import math
 import paho.mqtt.client as mqtt
@@ -56,7 +53,7 @@ def RGB(right, img):
     return rgb
 
 broker_address = "localhost"  # Replace with your MQTT broker address
-topic = "my_topic"
+topic = "car_receive"
 
 client = mqtt.Client()
 client.connect(broker_address)
